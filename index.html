@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      <div class="loader hide">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle 
+            cx="50" cy="50" r="30"
+            fill="transparent"
+            stroke-width="8px"
+            stroke-dasharray="160"
+          />
+        </svg>
+      </div>
+      <div class="star-container">
+        <div class="star-icon">
+          <img src="./images/icon-star.svg" alt="Icon Star">
+        </div>
+        <div class="star-content">
+          <h1 class="star-title">How did we do?</h1>
+          <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        </div>
+        <div class="stars">
+          <div class="star">
+            <input type="radio" name="star" id="star-01" value="1">
+            <label for="star-01" class="star-label">1</label>
+          </div>
+          <div class="star">
+            <input type="radio" name="star" id="star-02" value="2">
+            <label for="star-02" class="star-label">2</label>
+          </div>
+          <div class="star">
+            <input type="radio" name="star" id="star-03" value="3">
+            <label for="star-03" class="star-label">3</label>
+          </div>
+          <div class="star">
+            <input type="radio" name="star" id="star-04" value="4">
+            <label for="star-04" class="star-label">4</label>
+          </div>
+          <div class="star">
+            <input type="radio" name="star" id="star-05" value="5">
+            <label for="star-05" class="star-label">5</label>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">submit</button>
+      </div>
+      <div class="star-thankyou-container hide">
+        <div class="star-thankyou-icon">
+          <img src="./images/illustration-thank-you.svg" alt="Icon Thank you">
+        </div>
+        <div class="star-selected-container">
+          <p>You selected <span class="star-selected"></span> out of 5</p>
+        </div>
+        <div class="star-thankyou-content">
+          <h2 class="star-thankyou-title">Thank you!</h2>
+          <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/putu-bajra-39a212b0/" target="_blank">Bajra</a>.
+    </div>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+</html>
