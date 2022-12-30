@@ -1,6 +1,6 @@
 const btnSubmit = document.querySelector(".btn-submit");
 const stars = document.querySelectorAll("input[name=star]");
-const toastMessage = document.querySelector(".toast");
+const toastMessage = document.getElementById("toast");
 
 btnSubmit.addEventListener('click', (e) => {
   e.preventDefault();
@@ -21,9 +21,10 @@ btnSubmit.addEventListener('click', (e) => {
       }
     }
   } else {
+    toastMessage.children[0].textContent = "Please select the rating to submit.";
     toastMessage.classList.add("active");
     setTimeout(() => {
-      toastMessage.classList.remove("active")
+      toastMessage.classList.remove("active");
     }, 3000);
   }
 });
