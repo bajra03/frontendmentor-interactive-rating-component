@@ -183,6 +183,45 @@ footer a {
   color: var(--primary-orange);
 }
 
+/* Toast Message */
+.toast {
+  background-color: hsl(216deg 12% 54% / 10%);
+  color: var(--primary-orange);
+  padding: 15px 20px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  width: 270px;
+  display: none;
+  transition: .2s ease-in-out;
+  opacity: 0;
+}
+
+.toast.active {
+  display: block;
+  /* transform: translateX(-50%) translateY(-30px); */
+  animation: myAnim .3s ease 0s 1 normal forwards;
+}
+
+.toast__content {
+  text-align: center;
+  font-size: .8rem;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(-50%) translateY(-40px);
+	}
+}
+
 /* Responsive */
 @media (min-width: 768px){
   main {
